@@ -1,31 +1,14 @@
-{{-- <!-- resources/views/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rencana Tabungan</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    
-    @yield('content')
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-   
 
-
-</body>
-</html> --}}
-
-<!-- resources/views/layouts/app.blade.php -->
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rencana Tabungan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
     <style>
         body {
             background-color: #f7f7f7;
@@ -33,33 +16,32 @@
             color: #333;
         }
 
+        /* Navbar */
         .navbar {
             background-color: #007bff;
             padding: 10px 20px;
         }
 
-        .navbar .navbar-brand {
+        .navbar-brand {
             color: white;
             font-size: 1.5rem;
             font-weight: bold;
         }
 
-        .navbar .navbar-brand:hover {
+        .navbar-brand:hover {
             color: #e0e0e0;
         }
 
-        .container {
+        /* Main container */
+        .main-container {
             margin-top: 30px;
             padding: 30px;
-            background-color: white;
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .img-thumbnail {
-            border-radius: 10px;
-        }
-
+        /* Buttons */
         .btn-primary {
             background-color: #007bff;
             border-color: #007bff;
@@ -72,22 +54,25 @@
             border-color: #0056b3;
         }
 
+        /* Tables */
         .table {
+            margin-top: 30px;
             border-radius: 8px;
             overflow: hidden;
-            margin-top: 30px;
         }
 
-        .table th, .table td {
+        .table th,
+        .table td {
             vertical-align: middle;
         }
 
+        /* Footer */
         footer {
             background-color: #007bff;
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 0.9rem;
         }
 
@@ -100,30 +85,37 @@
             text-decoration: underline;
         }
 
-        /* For mobile responsiveness */
+        /* Responsive tweaks */
         @media (max-width: 767px) {
-            .container {
-                padding: 15px;
+            .main-container {
+                padding: 20px;
                 margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Rencana Tabungan</a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Rencana Tabungan</a>
+        </div>
     </nav>
 
-    <!-- Content Section -->
-    @yield('content')
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-container">
+            @yield('content') <!-- Placeholder untuk konten dinamis -->
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Rencana Tabungan. All Rights Reserved.</p>
+        <p>&copy; 2025 Rencana Tabungan. All Rights Reserved. | <a href="#">Kebijakan Privasi</a></p>
     </footer>
 
+    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

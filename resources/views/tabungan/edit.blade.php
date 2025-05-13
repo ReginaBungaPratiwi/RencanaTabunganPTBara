@@ -32,11 +32,6 @@
             <label for="target_tanggal" class="form-label">📅 Target Tanggal</label>
             <input type="date" class="form-control" name="target_tanggal" id="target_tanggal" value="{{ old('target_tanggal', $tabungan->target_tanggal->format('Y-m-d')) }}" required>
         </div>
-
-        <div class="mb-3">
-            <label for="nominal_terkumpul" class="form-label">💰 Nominal Tabungan Saat Ini</label>
-            <input type="number" class="form-control" name="nominal_terkumpul" id="nominal_terkumpul" value="{{ old('nominal_terkumpul', 0) }}" required min="0">
-        </div>
         
         <div class="mb-3">
             <label for="foto" class="form-label">📷 Ganti Foto (opsional)</label>
